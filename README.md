@@ -16,7 +16,7 @@ Zihui Gao<sup>1,2</sup>, Ke Liu<sup>3</sup>, Donny Y. Chen<sup>4</sup>, Duochao 
 [![Paper](https://img.shields.io/badge/Paper-OpenReview-8c1b13)](https://openreview.net/forum?id=pcEDgJBGuB)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce)](https://openreview.net/forum?id=pcEDgJBGuB)
 
-<img src="assets/teaser.png" width="100%">
+<img src="assets/teaser.png" width="70%">
 
 </div>
 
@@ -45,21 +45,17 @@ A small fraction (~3%) of supervised replay data from the original pretraining d
 
 8-view reconstruction at 224×224. ScanNet is in-distribution; 7Scenes, TUM-RGBD, and Matterport3D are zero-shot. MP3D DAc is reported at threshold 0.5; the other datasets use 0.2.
 
-| Method | ScanNet DAc↑ / CD↓ | 7Scenes DAc↑ / CD↓ | TUM-RGBD DAc↑ / CD↓ | MP3D DAc↑ / CD↓ |
-|---|---|---|---|---|
-| MV-DUSt3R | 88.2 / 1.79 | 89.6 / 0.95 | 87.5 / 2.60 | 30.3 / 43.2 |
-| **MV-DUSt3R + SAGE** | **91.2 / 1.69** | **98.0 / 0.76** | **93.1 / 1.85** | **48.0 / 24.9** |
-| VGGT | 87.0 / 3.30 | 88.5 / 1.13 | 80.4 / 4.24 | 53.1 / 20.7 |
-| **VGGT + SAGE** | **89.5 / 2.01** | **92.0 / 0.79** | **84.3 / 2.84** | **55.4 / 18.3** |
+<div align="center">
+<table>
+  <tr><th><sub>Method</sub></th><th><sub>ScanNet<br>DAc↑ / CD↓</sub></th><th><sub>7Scenes<br>DAc↑ / CD↓</sub></th><th><sub>TUM-RGBD<br>DAc↑ / CD↓</sub></th><th><sub>MP3D<br>DAc↑ / CD↓</sub></th></tr>
+  <tr><td><sub>MV-DUSt3R</sub></td><td><sub>88.2 / 1.79</sub></td><td><sub>89.6 / 0.95</sub></td><td><sub>87.5 / 2.60</sub></td><td><sub>30.3 / 43.2</sub></td></tr>
+  <tr><td><sub><b>MV-DUSt3R + SAGE</b></sub></td><td><sub><b>91.2 / 1.69</b></sub></td><td><sub><b>98.0 / 0.76</b></sub></td><td><sub><b>93.1 / 1.85</b></sub></td><td><sub><b>48.0 / 24.9</b></sub></td></tr>
+  <tr><td><sub>VGGT</sub></td><td><sub>87.0 / 3.30</sub></td><td><sub>88.5 / 1.13</sub></td><td><sub>80.4 / 4.24</sub></td><td><sub>53.1 / 20.7</sub></td></tr>
+  <tr><td><sub><b>VGGT + SAGE</b></sub></td><td><sub><b>89.5 / 2.01</b></sub></td><td><sub><b>92.0 / 0.79</b></sub></td><td><sub><b>84.3 / 2.84</b></sub></td><td><sub><b>55.4 / 18.3</b></sub></td></tr>
+</table>
+</div>
 
 On MV-DUSt3R, SAGE reduces Chamfer Distance by **20–42%** on the three unseen benchmarks. Zero-shot accuracy improves approximately log-linearly as the adaptation set grows from 100 to 10K video scenes. Adaptation takes under two days on 4× RTX 4090 GPUs.
-
-## Release Plan
-
-- [ ] Inference code and adapted checkpoints (MV-DUSt3R + SAGE, VGGT + SAGE)
-- [ ] Video preprocessing pipeline (filtering + COLMAP sparse reconstruction)
-- [ ] Training code
-- [ ] Evaluation scripts for ScanNet, 7Scenes, TUM-RGBD, and Matterport3D
 
 ## Installation
 
