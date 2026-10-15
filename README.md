@@ -38,7 +38,7 @@ From each video, SAGE builds training samples and supervision in three steps:
 A small fraction (~3%) of supervised replay data from the original pretraining distribution prevents catastrophic forgetting.
 
 <div align="center">
-<img src="assets/method.png" width="90%">
+<img src="assets/method.png" width="70%">
 </div>
 
 ## Results
