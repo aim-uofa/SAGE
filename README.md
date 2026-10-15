@@ -69,19 +69,6 @@ Coming soon. SAGE adapts on static-scene clips from [RealEstate10K](https://goog
 
 Coming soon.
 
-## Citation
-
-If you find this work useful, please cite:
-
-```bibtex
-@inproceedings{gao2026sage,
-  title     = {Scalable Adaptation of 3D Geometric Foundation Models via Weak Supervision from Internet Video},
-  author    = {Gao, Zihui and Liu, Ke and Chen, Donny Y. and Shi, Duochao and Lin, Guosheng and Bian, Jia-Wang and Chen, Hao and Shen, Chunhua},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026}
-}
-```
-
 ## Acknowledgements
 
 This project builds on [MV-DUSt3R](https://github.com/facebookresearch/mvdust3r), [VGGT](https://github.com/facebookresearch/vggt), [DUSt3R](https://github.com/naver/dust3r), and [COLMAP](https://github.com/colmap/colmap). We thank the authors for releasing their code and the creators of RealEstate10K and DL3DV for their datasets.
